@@ -1,5 +1,55 @@
-/*@import './base.css';*/
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/*  route.meta.transition  */
+.route-next-enter-from {
+    opacity: 0;
+    transform: translateX(50vw);
+}
+
+.route-next-enter-active {
+    transition: all 250ms ease-in-out;
+    z-index: 100;
+}
+
+.route-next-leave-to {
+    opacity: 0;
+}
+.route-next-leave-to,
+.route-next-leave-from,
+.route-next-leave-active {
+    transition: all 250ms ease-in;
+}
+
+
+.route-back-enter-from {
+    opacity: 0;
+}
+.route-back-enter-to {
+/*    opacity: 1;*/
+/*    transform: translateX(-100px);*/
+}
+
+.route-back-enter-active {
+/*    transition: all 100ms ease-in-out;*/
+/*    z-index: 99;*/
+}
+
+.route-back-leave-to {
+    opacity: 0;
+    transform: translateX(50vw);
+}
+
+.route-back-leave-to,
+.route-back-leave-from,
+.route-back-leave-active {
+    z-index: 100;
+    transition: all 250ms ease-in-out;
+}
+
+
+
+.app-header {z-index:5;}
+.fab {z-index:50;right:2rem;bottom:2rem;}

@@ -1,21 +1,23 @@
 <script setup>
+
 import { RouterLink } from 'vue-router'
+
 </script>
 
 <template>
-    <header class="bg-white border-b border-gray-400">
+    <header class="app-header h-14 px-1 flex items-center bg-white shadow-sm border-gray-400">
         <nav class="flex justify-center">
-            <RouterLink
+            <router-link
                 to="/"
                 class="inline-block px-4 py-3 font-bold select-none"
                 exact-active-class="text-blue-500"
-                >Home</RouterLink
+                >Home</router-link
             >
-            <RouterLink
-                to="/about"
+            <router-link
+                to="/about/"
                 class="inline-block px-4 py-3 font-bold select-none"
                 exact-active-class="text-blue-500"
-                >About</RouterLink
+                >About</router-link
             >
         </nav>
     </header>
