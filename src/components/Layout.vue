@@ -13,7 +13,6 @@ import Header from '@/components/Header.vue'
         <main class="h-full overflow-y-auto">
             <slot></slot>
         </main>
-
         <slot name="fab"></slot>
     </div>
 </template>

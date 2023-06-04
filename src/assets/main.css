@@ -10,18 +10,27 @@
 }
 
 .route-next-enter-active {
-    transition: all 250ms ease-in-out;
+    transition: all 200ms ease-in-out;
     z-index: 100;
 }
 
 .route-next-leave-to {
     opacity: 0;
+    transform: translateX(-50vw);
 }
 .route-next-leave-to,
 .route-next-leave-from,
 .route-next-leave-active {
-    transition: all 250ms ease-in;
+    transition: all 200ms ease-in;
 }
+
+.route-next-leave-active .fab-btns {
+    opacity: 0;
+}
+
+
+
+
 
 
 .route-back-enter-from {
@@ -46,10 +55,23 @@
 .route-back-leave-from,
 .route-back-leave-active {
     z-index: 100;
-    transition: all 250ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 
 
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 200ms ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
+}
+.v-enter-from {transform: translateY(40px);}
+.v-leave-to {transform: translateY(-40px);}
+
+
 .app-header {z-index:5;}
-.fab {z-index:50;right:2rem;bottom:2rem;}
+.fab-btn {z-index:50;right:2rem;bottom:2rem;}

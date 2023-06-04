@@ -1,6 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
+import { useRouteLoadingStore } from '@/stores/route-loading'
+import { storeToRefs } from 'pinia'
+
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
@@ -35,6 +38,14 @@ const router = createRouter({
 //     to.meta.transition = isItBackButton ? 'route-back' : 'route-next'
 //     window.popStateDetected = false
 // });
+
+
+router.beforeResolve(async (to)=> {
+    const store = useRouteLoadingStore();
+    const {loading } = storeToRefs(store);
+    // store.setLoading(true)
+    console.log('changing', loading.value)
+});
 
 
 // router.beforeEach(function (to, from, next) {

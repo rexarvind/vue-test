@@ -11,13 +11,13 @@ const alphabets = alpha.map((x)=> String.fromCharCode(x));
 <template>
     <Layout>
         <template v-slot:header>
-            <header class="app-header h-14 px-1 flex items-center bg-blue-500 text-white shadow-sm border-gray-400">
+            <header class="app-header h-14 px-1 flex shrink-0 items-center bg-blue-500 text-white shadow-sm border-gray-400">
                 <button type="button" @click="$router.back()" title="Back" class="px-2 py-2 rounded select-none">
                     <IconArrowBack class="h-7 w-7" />
                 </button>
                 <div class="px-3 flex flex-col select-none">
                     <span class=" font-semibold">Select contact</span>
-                    <span class="leading-tight text-xs">141 contacts</span>
+                    <span class="text-sm">141 contacts</span>
                 </div>
             </header>
         </template>

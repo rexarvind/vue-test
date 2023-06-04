@@ -5,7 +5,7 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-    <header class="app-header h-14 px-1 flex items-center bg-white shadow-sm border-gray-400">
+    <header class="app-header h-14 px-1 flex shrink-0 items-center bg-white shadow-sm border-gray-400">
         <nav class="flex justify-center">
             <router-link
                 to="/"
